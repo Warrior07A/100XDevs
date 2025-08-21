@@ -1,0 +1,85 @@
+body{
+    width:100vw;
+    height:100vh;
+    font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+    font-size: 28px;
+    color:#fff;
+
+}
+
+.text{
+
+}
+.centerall{
+    padding:80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+
+}
+
+#inputbox{
+    background-color: red;
+    width:19vw;
+    height:100vh;
+    gap:10px;
+}
+
+img{
+    /* font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;; */
+    height:200px;
+    width:400px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    margin-left:0%;
+    padding-left:0%;
+    
+    
+}
+
+.imgtext{
+    font-size:xx-large;
+}
+
+#form{
+    font-family: inherit;
+    text-align: center;
+    
+}
+
+
+#bigbox{
+    border-radius:5px;
+    box-shadow: rgba(0,0,2.5);
+    border:2px solid rgba(143, 143, 151, 0.914);
+    background-color: #fff;
+    max-width:1000px;
+    max-height:1000px;
+    margin-top:100px;
+    padding:20px;
+    gap:10px;
+    display:flex;
+    gap:10px;
+}
+
+#input1{
+    width: 300px;
+    height:30px;
+    padding:15px;
+}
+
+#button1{
+    background-color: blue;
+    display: flex;
+    align-content: center;
+    text-align: center;
+    width: 200px;
+    height:30px;
+    display: flex;
+    text-align: center;
+}
+
+#textlast{
+    color:white;
+}
