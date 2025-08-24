@@ -11,7 +11,7 @@
   </head>
   <body>
     <div class="container">
-      <h1>Reclick Me</h1>
+      <h1>Refresh Me </h1>
 
       <div class="dice">
         <p>Player 1</p>
@@ -24,22 +24,9 @@
       </div>
     </div>
     <div style="display: flex; justify-content: center; padding: 40px">
-      <!-- <button onclick="imagereload()" id="btn">CLICK ME</button> -->
     </div>
     <footer>www 🎲 App Brewery 🎲 com</footer>
-    <script>
-      var a;
-      var b;
-      for(let i=0;i<2;i++){
-        a = Math.floor(Math.random() * 6) + 1;
-        b="images/dice" + a + ".png";
-      }
-      var image=document.querySelectorAll("img")[0]; 
-      image.setAttribute("src",b);
-      var image2=document.querySelectorAll("img")[1];
-      image2.setAttribute("src",b2);
-      console.log(image);
-      console.log(b);
+    <script src="script.js">
     </script>
   </body>
 </html>
