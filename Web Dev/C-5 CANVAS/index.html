@@ -1,0 +1,96 @@
+<html>
+  <body>
+    <canvas
+      id="canvas"
+      background-color:green
+      style="border: 10px solid black;
+      width:600;
+      margin:600;
+      height:600;"
+
+      ></canvas>
+    <script>
+      async function main(){
+        
+        document.getElementById("canvas").style.backgroundColor="green";
+        let canvas=document.getElementById("canvas");
+        let ctx=canvas.getContext("2d");
+        let y=10;
+        let yVelocity=0;
+        let yAcc=9.8;
+        canvas.style.marginLeft="420"
+        canvas.style.marginTop="50"
+        
+        canvas.style.backgroundColor="green";
+        for (let i=0;i<1000000000;i++){
+           yVelocity+=0.2*yAcc;
+            y+=yVelocity
+            ctx.clearRect(0,0,1450,600);
+            
+            //made box
+            ctx.beginPath();
+            ctx.rect(600/8,y,80,80);
+            ctx.fill();
+
+
+            document.addEventListener("keydown",function(e){
+              if (e.code ==="ArrowUp"){
+                yVelocity=-14;
+              }
+              
+            })
+
+            
+              //creating 1st tower
+              ctx.beginPath();
+              ctx.rect(900-i*10,0,100,300);
+              ctx.fill();
+
+              //second tower
+              ctx.beginPath();
+              ctx.rect(900-i*10,50,100,200);
+              ctx.fill();
+
+              //creating 3rd tower
+              ctx.beginPath();
+              ctx.rect(1250-i*10,0,100,80);
+              ctx.fill();
+
+              //second 4th tower
+              ctx.beginPath();
+              ctx.rect(1250-i*10,300,100,600);
+              ctx.fill();
+
+              //creating 5th tower
+              ctx.beginPath();
+              ctx.rect(1550-i*10,0,100,300);
+              ctx.fill();
+
+              //second 6th tower
+              ctx.beginPath();
+              ctx.rect(1550-i*10,100,100,200);
+              ctx.fill();
+              
+              //creating 5th tower
+              ctx.beginPath();
+              ctx.rect(1850-i*10,0,100,300);
+              ctx.fill();
+
+              //second 6th tower
+              ctx.beginPath();
+              ctx.rect(1850-i*10,500,100,200);
+              ctx.fill();
+              
+
+              await new Promise((r)=> setTimeout(r,0.0333333*1000));
+            
+            
+        }
+
+      
+      }
+
+      main();
+    </script>
+  </body>
+</html>

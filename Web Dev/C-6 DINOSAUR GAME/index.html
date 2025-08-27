@@ -1,0 +1,238 @@
+<html>
+  <head>
+    <title>DINO GAME</title>
+    <body>
+      <div
+        style="
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+        "
+      >
+        <canvas
+          id="canvas"
+          style="width: 1000; height: 600px; border: 12px solid black;background-color: skyblue;"
+        >
+        </canvas>
+        <br /><br />
+        <div
+          id="message"
+          style="
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            font-size: medium;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+              'Lucida Sans Unicode', Geneva, Verdana, sans-serif;  
+          "
+        >
+          ALERT BOYS AND GIRLS !!
+          <br>
+          <br>
+          <div id="message"></div>
+        </div>
+      </div>
+      <script>
+        const gameover=false;
+        function coll(px, py, pw, ph, dx, dy, dw, dh) {
+          if (
+            dx + dw >= px &&
+            dx <= px + pw &&
+            dy + dh >= py &&
+            dy <= py + ph
+          ) {
+
+            // window.location.reload();
+            document.querySelector('#message').textContent = "You loss";
+            gameover=true;
+
+          } else {
+            return false;
+          }
+        }
+        async function main() {
+          var canvas = document.getElementById("canvas");
+          var ctx = canvas.getContext("2d");
+          var obstacle1 = 1600;
+          var obstacle2 = 2000;
+          var obstacle1 = 2400;
+          var obstacle2 = 2600;
+          var speed = 2;
+          var velocity = 0;
+          var v = 0;
+          var accn = 4.5;
+
+          document.addEventListener("keydown", function (e) {
+            if (e.code == "ArrowUp" && finalpos == 130) {
+              finalpos = 130 - velocity * 20;
+              console.log(finalpos);
+            }
+          });
+
+          // for ()
+          // document.onkeydown()
+          let finalpos = 130;
+          for (let i = 0; i < 1000000; i++) {
+            if (gameover){
+                return;
+            }
+            speed = speed + 5;
+
+            velocity = accn;
+            finalpos = finalpos + velocity;
+            if (finalpos > 130) {
+              finalpos = 130;
+            }
+
+
+            const dinoImg = new Image();
+            dinoImg.src="dino.png";
+            
+            
+            ctx.clearRect(0, 0, 1600, 800);
+            ctx.drawImage(dinoImg,10,finalpos,30,20)
+            // ctx.beginPath();
+            // ctx.rect(10, finalpos, 30, 20);
+            // ctx.fill();
+
+            //render 1st obstacle
+            // obstacle1=obstacle1-speed
+            ctx.beginPath();
+            ctx.rect(200 - speed, 120, 10, 50);
+            ctx.fill();
+
+            //2nd obstacle
+            ctx.beginPath();
+            ctx.rect(400 - speed, 120, 10, 50);
+            ctx.fill();
+
+            //3rd obstacle
+            ctx.beginPath();
+            ctx.rect(600 - speed, 120, 10, 50);
+            ctx.fill();
+
+            //3rd obstacle
+            ctx.beginPath();
+            ctx.rect(800 - speed, 120, 10, 50);
+            ctx.fill();
+
+            //3rd obstacle
+            ctx.beginPath();
+            ctx.rect(1000 - speed, 120, 10, 50);
+            ctx.fill();
+
+            //3rd obstacle
+            ctx.beginPath();
+            ctx.rect(1200 - speed, 120, 10, 50);
+            ctx.fill();
+
+            //3rd obstacle
+            ctx.beginPath();
+            ctx.rect(1400 - speed, 120, 10, 50);
+            ctx.fill();
+
+             //3rd obstacle
+            ctx.beginPath();
+            ctx.rect(1200 - speed, 120, 10, 50);
+            ctx.fill();
+
+             //3rd obstacle
+            ctx.beginPath();
+            ctx.rect(1200 - speed, 120, 10, 50);
+            ctx.fill();
+
+             //3rd obstacle
+            ctx.beginPath();
+            ctx.rect(1200 - speed, 120, 10, 50);
+            ctx.fill();
+
+             //3rd obstacle
+            ctx.beginPath();
+            ctx.rect(1200 - speed, 120, 10, 50);
+            ctx.fill();
+
+
+             //3rd obstacle
+            ctx.beginPath();
+            ctx.rect(1200 - speed, 120, 10, 50);
+            ctx.fill();
+
+            //3rd obstacle
+            ctx.beginPath();
+            ctx.rect(1200 - speed, 120, 10, 50);
+            ctx.fill();
+
+            //3rd obstacle
+            ctx.beginPath();
+            ctx.rect(1200 - speed, 120, 10, 50);
+            ctx.fill();
+
+            //3rd obstacle
+            ctx.beginPath();
+            ctx.rect(1200 - speed, 120, 10, 50);
+            ctx.fill();
+
+            //3rd obstacle
+            ctx.beginPath();
+            ctx.rect(1200 - speed, 120, 10, 50);
+            ctx.fill();
+
+            //3rd obstacle
+            ctx.beginPath();
+            ctx.rect(1200 - speed, 120, 10, 50);
+            ctx.fill();
+
+            //3rd obstacle
+            ctx.beginPath();
+            ctx.rect(1200 - speed, 120, 10, 50);
+            ctx.fill();
+            
+            
+            //3rd obstacle
+            ctx.beginPath();
+            ctx.rect(1200 - speed, 120, 10, 50);
+            ctx.fill();
+
+
+
+            
+
+
+            
+
+            await new Promise((r) => setTimeout(r, 33));
+
+            (dx = 10), (dy = finalpos), (dw = 30), (dh = 20);
+
+            coll(200 - speed, 120, 10, 50, 10, finalpos, 30, 20);
+            coll(400 - speed, 120, 10, 50, 10, finalpos, 30, 20);
+            coll(600 - speed, 120, 10, 50, 10, finalpos, 30, 20);
+            coll(800 - speed, 120, 10, 50, 10, finalpos, 30, 20);
+            coll(1000 - speed, 120, 10, 50, 10, finalpos, 30, 20);
+            coll(1200 - speed, 120, 10, 50, 10, finalpos, 30, 20);
+            coll(1400 - speed, 120, 10, 50, 10, finalpos, 30, 20);
+            coll(1600 - speed, 120, 10, 50, 10, finalpos, 30, 20);
+            coll(1800 - speed, 120, 10, 50, 10, finalpos, 30, 20);
+            coll(2000 - speed, 120, 10, 50, 10, finalpos, 30, 20);
+            coll(2200 - speed, 120, 10, 50, 10, finalpos, 30, 20);
+            coll(2400 - speed, 120, 10, 50, 10, finalpos, 30, 20);
+            coll(2600 - speed, 120, 10, 50, 10, finalpos, 30, 20);
+            coll(2800 - speed, 120, 10, 50, 10, finalpos, 30, 20);
+            coll(3000 - speed, 120, 10, 50, 10, finalpos, 30, 20);
+            coll(3200 - speed, 120, 10, 50, 10, finalpos, 30, 20);
+            coll(3400 - speed, 120, 10, 50, 10, finalpos, 30, 20);
+        
+        
+        
+        
+        
+        
+        
+        
+        }
+        }
+        main();
+      </script>
+    </body>
+  </head>
+</html>
