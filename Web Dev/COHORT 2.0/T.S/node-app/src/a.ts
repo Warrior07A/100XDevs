@@ -1,17 +1,27 @@
-function main(){
-    sec()
+interface User{
+    firstname:string,
+    lastname?:string,
+    address?:string,
+    runtime:number
+};
+
+function agecheck(user:User){
+    if (user.runtime>18){
+        console.log("he is above legal age");
+    }
 }
 
-function sec(){
-    setTimeout(()=>{
-        console.log("hi there");
-        third();
-    },1000);
+function namecheck(user:User){
+    if (user.firstname=="akshat"){
+        console.log("user is Danny and dont disturb him ");
+    }
 }
-function third(){
-    setTimeout(()=>{
-        console.log("hi there 2")
-    },1000);
-}
-
-main();
+namecheck({
+    firstname:"akshat",
+    runtime:19
+})
+    
+agecheck({
+    firstname:"akshat",
+    runtime:19
+})
