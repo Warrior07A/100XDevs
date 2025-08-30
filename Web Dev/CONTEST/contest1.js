@@ -1,3 +1,4 @@
+//question bank link="https://feather-lion-ff2.notion.site/JavaScript-Data-Types-Arrays-25d246afc9f2808aaa42e5f602ce362b#25d246afc9f28090b853ddb0ccb89946";
 let a = 42;
 let b = "Hello";
 let c = true;
